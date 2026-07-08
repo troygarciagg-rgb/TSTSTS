@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Memories</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <div class="heart-field" id="heartField" aria-hidden="true"></div>
+  <div class="sparkle-field" id="sparkleField" aria-hidden="true"></div>
+
+  <button class="floating-love-heart" id="floatingLoveHeart" type="button" aria-label="Open love letter timeline">
+    <span aria-hidden="true">❤️</span>
+  </button>
+
+  <main>
+    <section class="screen login-screen is-active" id="loginScreen" aria-labelledby="loginTitle">
+      <form class="login-card" id="loginForm" autocomplete="off">
+        <p class="eyebrow">Private scrapbook</p>
+        <h1 id="loginTitle">Our Memories <span aria-hidden="true">❤️</span></h1>
+        <p class="login-subtitle">Enter our special credentials to unlock our story.</p>
+
+        <label class="field">
+          <span>Username</span>
+          <input id="username" name="username" type="text" placeholder="TroySarah" required>
+        </label>
+
+        <label class="field">
+          <span>Password</span>
+          <input id="password" name="password" type="password" placeholder="••••••" required>
+        </label>
+
+        <p class="error-message" id="errorMessage" role="alert">Incorrect username or password. Try again ❤️</p>
+        <button class="primary-button" id="loginButton" type="submit">
+          <span class="button-text">Unlock Memories</span>
+          <span class="loader" aria-hidden="true"></span>
+        </button>
+      </form>
+    </section>
+
+    <section class="screen memories-screen" id="memoriesScreen" aria-labelledby="journeyTitle">
+      <header class="hero reveal">
+        <p class="eyebrow">A little forever, captured</p>
+        <h2 id="journeyTitle">Our Beautiful Journey <span aria-hidden="true">❤️</span></h2>
+        <p>Every picture tells a story, and every memory reminds me how lucky I am to have you.</p>
+      </header>
+
+      <section class="counter-panel reveal" aria-label="Relationship counter">
+        <p>❤️ Together for...</p>
+        <div class="counter-grid">
+          <article>
+            <strong id="daysCount">0</strong>
+            <span>Days</span>
+          </article>
+          <article>
+            <strong id="hoursCount">0</strong>
+            <span>Hours</span>
+          </article>
+          <article>
+            <strong id="minutesCount">0</strong>
+            <span>Minutes</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="gallery-shell reveal" aria-label="Photo memories">
+        <div class="section-heading">
+          <p class="eyebrow">Moments</p>
+          <h3>All the little reasons I smile</h3>
+        </div>
+        <div class="gallery" id="gallery"></div>
+      </section>
+
+      <section class="love-letter reveal" aria-labelledby="letterTitle">
+        <p class="eyebrow">A letter for you</p>
+        <h3 id="letterTitle">My favorite place is wherever you are.</h3>
+        <p>
+          My love, this is a space for the words I want you to keep close. Replace this letter with
+          the promises, memories, inside jokes, and quiet little truths that belong only to us.
+        </p>
+        <p>
+          Thank you for every soft moment, every laugh, every patient conversation, and every day
+          you make ordinary life feel like something worth celebrating.
+        </p>
+      </section>
+
+      <footer class="ending reveal">
+        <p>Thank you for being the most beautiful part of my life.</p>
+        <h3>I love you today, tomorrow, and always. <span class="beating-heart" aria-hidden="true">❤️</span></h3>
+      </footer>
+    </section>
+  </main>
+
+  <dialog class="love-modal" id="loveModal" aria-labelledby="modalTitle">
+    <div class="modal-glow" aria-hidden="true"></div>
+    <div class="modal-panel">
+      <button class="modal-close" id="closeLoveModal" type="button" aria-label="Close love letter timeline">×</button>
+      <header class="modal-hero">
+        <p class="eyebrow">Our hidden love letter</p>
+        <h2 id="modalTitle">A Timeline Written In Memories</h2>
+        <p>Scroll through a little trail of photographs, promises, and pieces of my heart.</p>
+      </header>
+
+      <section class="timeline" id="loveTimeline" aria-label="Love letter timeline"></section>
+
+      <section class="final-love-message modal-reveal">
+        <div class="final-sparkles" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <p class="eyebrow">The part I mean most</p>
+        <h2>My Love <span aria-hidden="true">❤️</span></h2>
+        <div class="final-letter">
+          <p>
+            You are my happiness, my safe place, and my favorite person. Every memory we have made
+            together has given my life more color, more meaning, and more reasons to be grateful.
+          </p>
+          <p>
+            I love the way you turn ordinary days into something I want to remember. I love the way
+            your presence feels like home. I promise to keep choosing you, cherishing you, and
+            creating beautiful memories with you for all the years ahead.
+          </p>
+        </div>
+        <p class="signature">Forever yours,<br>Troy <span aria-hidden="true">❤️</span></p>
+      </section>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
